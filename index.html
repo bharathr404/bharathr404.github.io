@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bharath Nallu | Senior Data Analyst</title>
+<meta name="description" content="Bharath Nallu — Senior Data Analyst. SQL, Power BI, Python, and Business Intelligence across banking and financial services.">
+<meta name="theme-color" content="#0b3d2e">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0d1b16;
+  --paper:#f6f5f0;
+  --green:#0b3d2e;
+  --green-2:#13684c;
+  --mint:#3fb990;
+  --line:#d9d6cc;
+  --muted:#5b6660;
+  --accent:#e8a33d;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',system-ui,sans-serif;
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit}
+.wrap{max-width:1000px;margin:0 auto;padding:0 28px}
+
+/* ---------- HERO ---------- */
+.hero{
+  background:
+    radial-gradient(140% 120% at 85% -10%, rgba(63,185,144,.35), transparent 55%),
+    linear-gradient(155deg,var(--green) 0%, #0a2e23 100%);
+  color:#eef3ef;
+  padding:90px 0 70px;
+  position:relative;
+  overflow:hidden;
+}
+.hero::after{
+  content:"";position:absolute;inset:0;
+  background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);
+  background-size:32px 32px;
+  mask:radial-gradient(120% 90% at 50% 0%,black,transparent 70%);
+  pointer-events:none;
+}
+.hero .wrap{position:relative;z-index:1}
+.eyebrow{
+  font-family:'JetBrains Mono',monospace;
+  font-size:13px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--mint);margin-bottom:18px;
+}
+.hero h1{
+  font-family:'Space Grotesk',sans-serif;
+  font-weight:700;font-size:clamp(2.4rem,6vw,4.1rem);
+  line-height:1.02;letter-spacing:-.02em;margin-bottom:18px;
+}
+.hero .role{
+  font-family:'JetBrains Mono',monospace;
+  font-size:clamp(.85rem,2vw,1rem);color:#cfe6da;margin-bottom:26px;
+}
+.hero .role span{color:var(--accent)}
+.hero p.lede{max-width:620px;color:#d7e2db;font-size:1.05rem}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:.95rem;
+  padding:12px 22px;border-radius:999px;text-decoration:none;
+  transition:transform .15s ease,background .15s ease;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--mint);color:#06241a}
+.btn-ghost{border:1px solid rgba(255,255,255,.3);color:#eef3ef}
+
+/* ---------- STATS STRIP ---------- */
+.stats{
+  background:var(--ink);color:#dfe7e2;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:30px 28px}
+.stat .num{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.9rem;color:var(--mint)}
+.stat .lbl{font-size:.82rem;color:#9fb2aa;letter-spacing:.02em}
+
+/* ---------- SECTIONS ---------- */
+section.block{padding:72px 0}
+.sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:36px}
+.sec-num{font-family:'JetBrains Mono',monospace;color:var(--mint);font-size:.95rem}
+.sec-head h2{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:1.9rem;letter-spacing:-.01em}
+.rule{flex:1;height:1px;background:var(--line)}
+
+.about p{max-width:760px;color:#3a443e;font-size:1.07rem}
+.about p+p{margin-top:16px}
+
+/* timeline */
+.exp{display:grid;gap:0}
+.job{
+  display:grid;grid-template-columns:200px 1fr;gap:28px;
+  padding:30px 0;border-top:1px solid var(--line);
+}
+.job:last-child{border-bottom:1px solid var(--line)}
+.job .meta .co{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.15rem}
+.job .meta .when{font-family:'JetBrains Mono',monospace;font-size:.8rem;color:var(--muted);margin-top:6px}
+.job .meta .loc{font-size:.85rem;color:var(--muted)}
+.job .body .title{font-weight:600;color:var(--green-2);margin-bottom:10px}
+.job ul{list-style:none;display:grid;gap:9px}
+.job li{position:relative;padding-left:20px;color:#3a443e;font-size:.97rem}
+.job li::before{content:"▸";position:absolute;left:0;color:var(--mint)}
+
+/* projects */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:760px){.cards{grid-template-columns:1fr}}
+.card{
+  border:1px solid var(--line);border-radius:14px;padding:26px;
+  background:#fff;transition:border-color .2s,box-shadow .2s,transform .2s;
+}
+.card:hover{border-color:var(--mint);box-shadow:0 12px 30px -18px rgba(11,61,46,.4);transform:translateY(-3px)}
+.card h3{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:1.25rem;margin-bottom:6px}
+.card .stack{font-family:'JetBrains Mono',monospace;font-size:.74rem;color:var(--muted);margin-bottom:14px}
+.card ul{list-style:none;display:grid;gap:8px;margin-bottom:16px}
+.card li{position:relative;padding-left:18px;color:#3a443e;font-size:.95rem}
+.card li::before{content:"–";position:absolute;left:0;color:var(--mint)}
+.card a.repo{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:.9rem;color:var(--green-2);text-decoration:none}
+.card a.repo:hover{color:var(--mint)}
+.card.feature{border-color:var(--mint);background:linear-gradient(180deg,#f3fbf7 0%,#fff 60%)}
+.badge{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:#06241a;background:var(--mint);padding:3px 10px;border-radius:6px;margin-bottom:12px}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.skillgrp{border:1px solid var(--line);border-radius:12px;padding:20px;background:#fff}
+.skillgrp h4{font-family:'JetBrains Mono',monospace;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--green-2);margin-bottom:12px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{font-size:.83rem;background:#eef2ee;border:1px solid var(--line);border-radius:6px;padding:4px 10px;color:#34403a}
+
+/* education */
+.edu{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.edu .item{border-left:3px solid var(--mint);padding:6px 0 6px 18px}
+.edu .deg{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:1.05rem}
+.edu .school{color:var(--muted);font-size:.92rem}
+.edu .yr{font-family:'JetBrains Mono',monospace;font-size:.78rem;color:var(--muted);margin-top:4px}
+
+/* footer */
+footer{background:var(--green);color:#cfe0d8;padding:54px 0 40px;margin-top:20px}
+footer h2{font-family:'Space Grotesk',sans-serif;color:#fff;font-size:1.7rem;margin-bottom:10px}
+footer p{color:#aecabd;margin-bottom:22px}
+.flinks{display:flex;flex-wrap:wrap;gap:14px}
+.flinks a{
+  font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:.92rem;
+  text-decoration:none;color:#eef3ef;border:1px solid rgba(255,255,255,.25);
+  padding:10px 18px;border-radius:999px;transition:background .15s
+}
+.flinks a:hover{background:rgba(255,255,255,.12)}
+.copy{margin-top:34px;font-size:.8rem;color:#8fb0a0;font-family:'JetBrains Mono',monospace}
+
+@media(max-width:760px){
+  .stats .wrap{grid-template-columns:repeat(2,1fr)}
+  .job{grid-template-columns:1fr;gap:14px}
+  .skills,.edu{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Senior Data Analyst · Orlando, FL</div>
+    <h1>Bharath Nallu</h1>
+    <div class="role">SQL <span>/</span> Power BI <span>/</span> Python <span>/</span> Business Intelligence</div>
+    <p class="lede">7+ years turning large-scale financial and operational data into decisions — across banking, financial services, and technology. I build dashboards, automate reporting, and find the signal in the noise.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="mailto:bharathn5002@gmail.com">Get in touch</a>
+      <a class="btn btn-ghost" href="https://github.com/bharathr404" target="_blank" rel="noopener">View GitHub</a>
+    </div>
+  </div>
+</header>
+
+<div class="stats">
+  <div class="wrap">
+    <div class="stat"><div class="num">7+</div><div class="lbl">Years in analytics</div></div>
+    <div class="stat"><div class="num">40%</div><div class="lbl">Manual effort cut via automation</div></div>
+    <div class="stat"><div class="num">3</div><div class="lbl">Domains: banking · tech · fintech</div></div>
+    <div class="stat"><div class="num">10+</div><div class="lbl">Tools across the BI stack</div></div>
+  </div>
+</div>
+
+<main>
+<section class="block about">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">01</span><h2>About</h2><span class="rule"></span></div>
+    <p>I'm a Senior Data Analyst with over seven years of experience transforming financial and operational data into actionable insight. My work spans customer behavior, financial performance, fraud trends, and operational KPIs — the analysis that underpins strategic decisions.</p>
+    <p>I'm at home across the full BI stack: exploratory analysis and statistical work in Python, scalable processing with PySpark and Databricks, modeling in Snowflake and SQL, and dashboards in Power BI, Tableau, and QuickSight. I care about reporting that's accurate, automated, and genuinely used by the people who depend on it.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">02</span><h2>Experience</h2><span class="rule"></span></div>
+    <div class="exp">
+
+      <div class="job">
+        <div class="meta">
+          <div class="co">USAA</div>
+          <div class="when">Apr 2023 – Present</div>
+          <div class="loc">Orlando, FL</div>
+        </div>
+        <div class="body">
+          <div class="title">Sr. Data Analyst</div>
+          <ul>
+            <li>Analyzed large-scale datasets with SQL, Python, and Snowflake to surface trends and actionable insights for data-driven decisions.</li>
+            <li>Built interactive dashboards in Power BI, Tableau, and Amazon QuickSight to track business metrics and executive KPIs.</li>
+            <li>Processed high-volume data with PySpark in Databricks, improving consistency and speeding up analytics.</li>
+            <li>Automated recurring reporting with SQL, Python, and AWS — cutting manual effort by roughly 40%.</li>
+            <li>Ran data validation and quality checks across sources to keep reporting accurate and reliable.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="meta">
+          <div class="co">Amazon</div>
+          <div class="when">Jul 2022 – Mar 2023</div>
+          <div class="loc">Austin, TX</div>
+        </div>
+        <div class="body">
+          <div class="title">Software Engineer – Data Analytics</div>
+          <ul>
+            <li>Analyzed operational and customer datasets in SQL and Python to identify trends and improvement opportunities.</li>
+            <li>Developed dashboards in Amazon QuickSight and Power BI for cross-functional operational metrics.</li>
+            <li>Transformed high-volume data with PySpark in Databricks to support scalable analytics.</li>
+            <li>Optimized SQL and automated reporting workflows, reducing manual effort by ~30%.</li>
+            <li>Partnered with product, BA, and engineering teams to define metrics and deliver analytical solutions.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="meta">
+          <div class="co">American Express</div>
+          <div class="when">Aug 2017 – Dec 2020</div>
+          <div class="loc">Hyderabad, India</div>
+        </div>
+        <div class="body">
+          <div class="title">Data Analyst</div>
+          <ul>
+            <li>Analyzed customer, transaction, and operational data in SQL and Python to reveal behavior and performance insights.</li>
+            <li>Built Power BI and Tableau dashboards for business and operational KPIs, cutting manual reporting by ~30%.</li>
+            <li>Performed EDA and data validation to flag anomalies and improve data quality.</li>
+            <li>Supported customer segmentation, trend analysis, and executive reporting from large datasets.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">03</span><h2>Projects</h2><span class="rule"></span></div>
+    <div class="cards">
+
+      <div class="card feature">
+        <span class="badge">SQL · Featured</span>
+        <h3>Titanic Disaster — SQL Data Analysis</h3>
+        <div class="stack">SQL · Relational Modeling · Joins · Aggregation</div>
+        <ul>
+          <li>Modeled the flat Titanic dataset into a normalized relational schema (passenger, survival, family, ticket) with primary and foreign keys.</li>
+          <li>Wrote 10 analysis queries using joins, GROUP BY, CASE, and aggregation to measure survival rate by class, sex, age, port, and family size.</li>
+          <li>Surfaced the classic findings — class and sex drove survival, and "women &amp; children first" shows up clearly in the data.</li>
+        </ul>
+        <a class="repo" href="https://github.com/bharathr404/titanic-sql" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+
+      <div class="card">
+        <h3>Classification &amp; Regression Analysis</h3>
+        <div class="stack">Python · Pandas · scikit-learn</div>
+        <ul>
+          <li>Built supervised-learning workflows for both classification and regression on prepared datasets.</li>
+          <li>Covers the full analytical loop — cleaning data, fitting models, and comparing predictive performance.</li>
+        </ul>
+        <a class="repo" href="https://github.com/bharathr404/Classification-and-Regression-Using-Machine-Learning" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+
+      <div class="card">
+        <h3>Exploratory Data Analysis Notebook</h3>
+        <div class="stack">Jupyter · Python · Pandas</div>
+        <ul>
+          <li>An end-to-end EDA project in Jupyter — exploring, cleaning, and analyzing a dataset to surface patterns.</li>
+          <li>Documents the analytical process from raw data to insight in a reproducible notebook.</li>
+        </ul>
+        <a class="repo" href="https://github.com/bharathr404/mlproject" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">04</span><h2>Skills</h2><span class="rule"></span></div>
+    <div class="skills">
+      <div class="skillgrp">
+        <h4>Programming</h4>
+        <div class="tags"><span class="tag">SQL</span><span class="tag">Python</span><span class="tag">Java</span><span class="tag">Pandas</span><span class="tag">PySpark</span><span class="tag">R</span></div>
+      </div>
+      <div class="skillgrp">
+        <h4>Analytics &amp; BI</h4>
+        <div class="tags"><span class="tag">Statistical Analysis</span><span class="tag">EDA</span><span class="tag">Data Validation</span><span class="tag">Power BI</span><span class="tag">Tableau</span><span class="tag">QuickSight</span><span class="tag">KPI Reporting</span></div>
+      </div>
+      <div class="skillgrp">
+        <h4>Databases &amp; Big Data</h4>
+        <div class="tags"><span class="tag">Snowflake</span><span class="tag">SQL Server</span><span class="tag">PostgreSQL</span><span class="tag">MySQL</span><span class="tag">Oracle</span><span class="tag">Databricks</span></div>
+      </div>
+      <div class="skillgrp">
+        <h4>Cloud &amp; Data Engineering</h4>
+        <div class="tags"><span class="tag">AWS (EC2/S3/Glue/Athena)</span><span class="tag">ETL / ELT</span><span class="tag">Data Warehousing</span><span class="tag">Dimensional Modeling</span><span class="tag">Star Schema</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">05</span><h2>Education</h2><span class="rule"></span></div>
+    <div class="edu">
+      <div class="item">
+        <div class="deg">M.S. in Data Science</div>
+        <div class="school">State University of New York at Buffalo</div>
+        <div class="yr">June 2022</div>
+      </div>
+      <div class="item">
+        <div class="deg">B.Tech in Computer Science &amp; Engineering</div>
+        <div class="school">Manipal University Jaipur</div>
+        <div class="yr">July 2018</div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <h2>Let's talk data.</h2>
+    <p>Open to senior data analyst and BI roles. Reach out anytime.</p>
+    <div class="flinks">
+      <a href="mailto:bharathn5002@gmail.com">bharathn5002@gmail.com</a>
+      <a href="tel:7163499673">716-349-9673</a>
+      <a href="https://github.com/bharathr404" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <div class="copy">© 2026 Bharath Nallu · Built &amp; hosted on GitHub Pages</div>
+  </div>
+</footer>
+
+</body>
+</html>
